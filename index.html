@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photon Labs · Dimensionamiento fotovoltaico para un aula</title>
+  <meta name="description" content="Situación-problema TE1020: simulador web para dimensionar y cotizar un sistema fotovoltaico para un aula escolar.">
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="#inicio">
+      <img src="logo.png" alt="Logo A01744485" onerror="this.style.display='none'">
+      <span>Photon Labs</span>
+    </a>
+    <nav>
+      <a href="#mision">Misión</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#fases">Fases</a>
+      <a href="#entregable">Entregable</a>
+      <a href="#integridad">IA</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <p class="eyebrow">TE1020 · Situación-problema</p>
+      <h1>De un análisis de circuitos a una <span>propuesta solar confiable</span></h1>
+      <p class="lead">Una aplicación web que dimensiona y cotiza un sistema fotovoltaico para un aula escolar, con cálculos verificables, componentes reales y un reporte PDF pensado para el cliente.</p>
+      <div class="cta">
+        <a class="btn primary" href="#modulos">Ver el simulador</a>
+        <a class="btn ghost" href="#fases">Ruta de 5 semanas</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img src="logo.png" alt="Logo A01744485 con panel solar, sol, hoja y clavija" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><strong>7</strong><span>módulos de ingeniería</span></div>
+    <div><strong>5</strong><span>semanas de desarrollo</span></div>
+    <div><strong>0</strong><span>bases de datos</span></div>
+    <div><strong>1</strong><span>reporte PDF para el cliente</span></div>
+  </section>
+
+  <section class="section" id="mision">
+    <h2>🎯 La misión</h2>
+    <div class="two-col">
+      <p>Desarrollar individualmente una aplicación web para dimensionar y cotizar un sistema fotovoltaico, tomando como caso inicial un <strong>aula escolar</strong>. La IA puede ayudar a escribir el código, pero la responsabilidad del modelo físico-matemático, la compatibilidad eléctrica, la verificación y la comunicación de la propuesta es del ingeniero.</p>
+      <blockquote>¿Cómo convertir un análisis de circuitos eléctricos en una herramienta confiable que Photon Labs pueda usar para cotizar proyectos y comunicar su valor a los clientes?</blockquote>
+    </div>
+    <p class="note">La aplicación es autocontenida: catálogos locales y cálculos ejecutados en el navegador, publicada en GitHub Pages. El resultado es un dimensionamiento y una cotización <strong>preliminar</strong>, no un proyecto ejecutivo autorizado para construcción.</p>
+  </section>
+
+  <section class="section alt" id="modulos">
+    <h2>⚙️ ¿Qué hace el simulador?</h2>
+    <div class="grid">
+      <article class="card"><span class="icon">🏫</span><h3>Consumo del aula</h3><p>Registra equipos, cantidad, potencia y tiempo de uso para estimar demanda (kW) y energía consumida (kWh).</p></article>
+      <article class="card"><span class="icon">☀️</span><h3>Paneles solares</h3><p>Dimensiona cantidad, potencia y configuración serie/paralelo según la demanda y las horas solares pico.</p></article>
+      <article class="card"><span class="icon">🔌</span><h3>Inversor</h3><p>Selecciona un equipo real y verifica potencia, tensiones, corrientes y compatibilidad con el arreglo.</p></article>
+      <article class="card"><span class="icon">🔋</span><h3>Baterías</h3><p>Estima capacidad, configuración y autonomía, indicando supuestos y límites del cálculo.</p></article>
+      <article class="card"><span class="icon">🛒</span><h3>Catálogo comercial</h3><p>Productos reales con marca, modelo, especificaciones, precio, proveedor, enlace y fecha de consulta.</p></article>
+      <article class="card"><span class="icon">💰</span><h3>Evaluación económica</h3><p>Calcula inversión, ahorro estimado y retorno a partir de la tarifa en MXN/kWh que introduce el usuario.</p></article>
+      <article class="card wide"><span class="icon">📄</span><h3>Reporte PDF</h3><p>Propuesta técnico-comercial legible, profesional y comprensible para un cliente no especialista.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="fisica">
+    <h2>📐 La física detrás de la propuesta</h2>
+    <div class="grid formulas">
+      <div class="card"><h3>Energía diaria</h3><code>E = Σ (P · cant · horas) / 1000</code><p>kWh/día del aula.</p></div>
+      <div class="card"><h3>Paneles</h3><code>N = E / (HSP · Ppanel · PR)</code><p>Con pérdidas declaradas como supuesto.</p></div>
+      <div class="card"><h3>Serie y paralelo</h3><code>Serie: ΣV · Paralelo: ΣI</code><p>Define Voc, Vmp, Isc e Imp del arreglo.</p></div>
+      <div class="card"><h3>Baterías</h3><code>C = E_resp / (DoD · η)</code><p>Capacidad útil según autonomía deseada.</p></div>
+      <div class="card"><h3>Retorno</h3><code>Payback = Inversión / Ahorro anual</code><p>Cambia con la tarifa MXN/kWh.</p></div>
+      <div class="card"><h3>Ley de Ohm</h3><code>V = I · R · P = V · I</code><p>Base del análisis de circuitos.</p></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="fases">
+    <h2>🗓️ Ruta de cinco semanas</h2>
+    <ol class="timeline">
+      <li><span class="week">Semana 1 · 2–6 nov</span><h3>Ingreso a Photon Labs</h3><p>Herramientas, repositorio, interfaz inicial y GitHub Pages.</p><em>Evidencia: primera versión publicada</em></li>
+      <li><span class="week">Semana 2 · 9–13 nov</span><h3>Conocer al cliente</h3><p>Inventario de cargas, potencia, horas de operación y consumo.</p><em>Evidencia: módulo de consumo calculable</em></li>
+      <li><span class="week">Semana 3 · 16–20 nov</span><h3>Diseñar con componentes reales</h3><p>Paneles, conexiones, catálogo y fichas técnicas con precios verificables.</p><em>Evidencia: dimensionamiento fotovoltaico</em></li>
+      <li><span class="week">Semana 4 · 23–27 nov</span><h3>Preparar la cotización</h3><p>Inversor, baterías, compatibilidad, costos, ahorros y recuperación.</p><em>Evidencia: propuesta calculada</em></li>
+      <li><span class="week">Semana 5 · 30 nov–4 dic</span><h3>Presentar al director</h3><p>Validación, pruebas finales y PDF diseñado para el cliente.</p><em>Evidencia: app final + PDF</em></li>
+    </ol>
+  </section>
+
+  <section class="section" id="entregable">
+    <h2>📄 La evidencia final</h2>
+    <p>Un reporte PDF generado automáticamente por la app, con el aspecto de una propuesta que Photon Labs entregaría a un cliente.</p>
+    <ul class="chips">
+      <li>Portada</li><li>Resumen ejecutivo</li><li>Análisis del consumo</li><li>Sistema recomendado</li><li>Componentes reales</li><li>Presupuesto</li><li>Ahorros estimados</li><li>Retorno de inversión</li><li>Gráficas</li><li>Anexos técnicos</li>
+    </ul>
+    <p class="note">Una propuesta convincente muestra hipótesis y limitaciones: no exagera beneficios ni promete ahorros garantizados.</p>
+  </section>
+
+  <section class="section alt" id="integridad">
+    <h2>🧠 IA e integridad académica</h2>
+    <div class="two-col">
+      <p>La aplicación se construye mediante prompts con Codex o Claude Code, pero la calidad del código generado no sustituye el aprendizaje. Cada fórmula se explica, cada especificación y precio se coteja con fuentes de mercado, y los casos de prueba se verifican manualmente.</p>
+      <ul class="checks">
+        <li>Fórmulas explicadas y comprobadas</li>
+        <li>Fichas técnicas y precios verificados</li>
+        <li>Casos de prueba hechos a mano</li>
+        <li>Inconsistencias corregidas</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="logo.png" alt="" onerror="this.style.display='none'">
+    <p><strong>Photon Labs</strong> · TE1020 · A01744485</p>
+    <p class="small">
+      <a href="#">Repositorio en GitHub</a> ·
+      <a href="#">Aplicación en GitHub Pages</a>
+    </p>
+  </footer>
+
+</body>
+</html>
